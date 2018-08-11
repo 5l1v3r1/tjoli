@@ -35,8 +35,8 @@ $jumlah = trim(fgets(STDIN));
 echo "Jeda? 0-9999999999 (ex:0)\nInput : ";
 $jeda = trim(fgets(STDIN));
 for($a=0;$a<$jumlah;$a++){
-	$jum = rand(123,987);
-	$jum1 = rand(123,987);
+	$jum = rand(123,$jumlah);
+	$jum1 = rand($jum,$jumlah);
 	$chance = jolly($uid, $usertoken, $jum);
 	$chance1 = jolly($uid, $usertoken, $jum1);
 	$pakan = pakan($uid, $usertoken);
